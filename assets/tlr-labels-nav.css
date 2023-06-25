@@ -1,0 +1,67 @@
+.record-labels {
+  display: grid;
+  font-size: 2rem;
+  font-family: "Lato", sans-serif;
+  grid-template-columns: repeat(6, max-content);
+  text-transform: uppercase;
+  white-space: nowrap;
+  column-gap: 3rem;
+  row-gap: 2rem;
+  justify-items: center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  max-width: 1600px;
+  justify-content: center;
+  align-content: center;
+}
+.record-labels__label: {
+  transition: all 0.5s ease-in-out;
+}
+.record-labels__label:link,
+.record-labels__label:visited {
+  text-decoration: none;
+  color: #000;
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease-in-out;
+}
+.record-labels__label:hover,
+.record-labels__label:active {
+  border-bottom: 0.1rem solid #000;
+}
+.record-labels__btn {
+  grid-row: 2 / 3;
+  grid-column: 3 / 5;
+  transition: all 0.3s ease-in-out;
+}
+
+.record-labels__btn:link,
+.record-labels__btn:visited {
+  text-decoration: none;
+  color: #000;
+  border-top: 0.1rem solid #000;
+  border-bottom: 0.1rem solid #000;
+}
+.record-labels__btn:hover,
+.record-labels__btn:active {
+  color: #7c7c7c;
+  border-top: 0.1rem solid #7c7c7c;
+  border-bottom: 0.1rem solid #7c7c7c;
+}
+
+@media (max-width: 767px) {
+  .record-labels {
+    font-size: 18px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 2rem;
+    row-gap: 2rem;
+    padding: 2rem 0rem;
+    white-space: break-spaces;
+    text-align: center;
+  }
+  .record-labels__btn {
+    grid-row: 3 / 3;
+    grid-column: 1 / -1;
+  }
+}

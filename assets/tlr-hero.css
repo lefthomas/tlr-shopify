@@ -1,0 +1,23 @@
+.tlr-hero-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tlr-hero-over-title {
+}
+
+.trl-hero-img {
+  max-width: 80%;
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.tlr-hero-under-title {
+}

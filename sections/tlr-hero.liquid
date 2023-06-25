@@ -1,0 +1,30 @@
+{{ 'tlr-hero.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-hero-container">
+  <h1 class="tlr-hero-over-title">{{ section.settings.title1 }}</h1>
+   {%- if section.settings.tlr-hero != blank -%}
+   <img src="{{ section.settings.tlr-hero | img_url:'master'}}" alt="The Listening Room Hero image of a 33rpm classical LP" class="trl-hero-img">
+      {%- endif -%}
+  <h1 class="tlr-hero-under-title">{{ section.settings.title2 }} </h1>
+</div>
+  
+{% schema %}
+  {
+    "name": "tlr hero",
+    "settings": [
+   {
+  "type": "image_picker",
+  "id": "tlr-hero",
+  "label": "tlr-hero"
+},
+  {"type": "text",
+  "id": "title1",
+  "label":"title 1"},
+
+  {"type": "text",
+  "id": "title2",
+  "label":"title 2"}
+
+    ]
+  }
+{% endschema %}

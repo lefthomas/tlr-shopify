@@ -1,0 +1,16 @@
+.tlr-classical-title-container{
+  padding: 2rem;
+  width: 80%;
+    margin: 0 auto;
+}
+
+.tlr-classical-title-composer{
+  font-weight: 900;
+  font-size: 28px;
+  margin: 0;
+}
+
+.tlr-classical-title-title{
+  font-size: 24px;
+   margin: 0;
+}

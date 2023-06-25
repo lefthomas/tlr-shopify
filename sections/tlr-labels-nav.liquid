@@ -1,0 +1,84 @@
+{{ 'tlr-labels-nav.css' | asset_url | stylesheet_tag }}
+
+<div class="record-labels">
+  <a href="{{ section.settings.url1 }}" class="record-labels__label">{{ section.settings.title1 }}</a>
+  <a href="{{ section.settings.url2 }}" class="record-labels__label">{{ section.settings.title2 }}</a>
+  <a href="{{ section.settings.url3 }}" class="record-labels__label">{{ section.settings.title3 }}</a>
+  <a href="{{ section.settings.url4 }}" class="record-labels__label">{{ section.settings.title4 }}</a>
+  <a href="{{ section.settings.url5 }}" class="record-labels__label">{{ section.settings.title5 }}</a>
+  <a href="{{ section.settings.url6 }}" class="record-labels__label">{{ section.settings.title6 }}</a>
+  <a href="{{ section.settings.url-all-labels }}" class="record-labels__btn">Explore All</a>
+</div>
+
+{% schema %}
+{
+  "name": "tlr label nav",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title1",
+      "label": "Title 1"
+    },
+    {
+      "type": "url",
+      "id": "url1",
+      "label": "URL 1"
+    },
+    {
+      "type": "text",
+      "id": "title2",
+      "label": "Title 2"
+    },
+    {
+      "type": "url",
+      "id": "url2",
+      "label": "URL 2"
+    },
+    {
+      "type": "text",
+      "id": "title3",
+      "label": "Title 3"
+    },
+    {
+      "type": "url",
+      "id": "url3",
+      "label": "URL 3"
+    },
+    {
+      "type": "text",
+      "id": "title4",
+      "label": "Title 4"
+    },
+    {
+      "type": "url",
+      "id": "url4",
+      "label": "URL 4"
+    },
+    {
+      "type": "text",
+      "id": "title5",
+      "label": "Title 5"
+    },
+    {
+      "type": "url",
+      "id": "url5",
+      "label": "URL 5"
+    },
+    {
+      "type": "text",
+      "id": "title6",
+      "label": "Title 6"
+    },
+    {
+      "type": "url",
+      "id": "url6",
+      "label": "URL 6"
+    },
+        {
+      "type": "url",
+      "id": "url-all-labels",
+      "label": "url all labels"
+    }
+  ]
+}
+{% endschema %}

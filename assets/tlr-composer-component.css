@@ -1,0 +1,59 @@
+.tlr-composer-component-container {
+  width: 90%;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+.tlr-composer-component-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 20px;
+}
+
+.tlr-composer-component-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.tlr-composer-component-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.tlr-composer-component-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.tlr-composer-component-text {
+  text-transform: uppercase;
+  margin: 0;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+.tlr-composer-component-text:hover {
+  color: darkgray;
+}
+
+@media (max-width: 767px) {
+  .tlr-composer-component-list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 10px;
+  }
+
+  .tlr-composer-component-img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .tlr-composer-component-text {
+    font-size: 12px;
+  }
+}

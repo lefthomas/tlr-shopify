@@ -1,0 +1,44 @@
+{{ 'tlr-classical-condition.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-classical-condition-container">
+  <table class="tlr-classical-condition-table">
+     <tr class="tlr-classical-condition-row">
+      <td class="tlr-classical-condition-tag"></td>
+      <td class="tlr-classical-condition-cell">Condition</td>
+  {% if product.metafields.custom.record_notes or product.metafields.custom.sleeve_notes or product.metafields.custom.other_notes  %}
+      <td class="tlr-classical-condition-cell">Notes</td>
+  {% endif %}
+
+    </tr>
+     <tr class="tlr-classical-condition-row">
+      <td class="tlr-classical-condition-tag">Record(s)</td>
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.condition_record }}</td>
+             {%- if product.metafields.custom.record_notes  -%}
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.record_notes }}</td>
+                {%- endif -%}
+    </tr>
+    <tr class="tlr-classical-condition-row">
+      <td class="tlr-classical-condition-tag">Sleeve</td>
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.condition_sleeve }}</td>
+        {%- if product.metafields.custom.sleeve_notes -%}
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.sleeve_notes}}</td>
+            {%- endif -%}
+    </tr>
+    <tr class="tlr-classical-condition-row">
+  {%- if product.metafields.custom.condition_other or product.metafields.custom.other_notes -%}
+      <td class="tlr-classical-condition-tag">Other</td>
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.condition_other }}</td>
+         {%- if product.metafields.custom.other_notes -%}
+      <td class="tlr-classical-condition-cell">{{ product.metafields.custom.other_notes}}</td>
+            {%- endif -%}
+    </tr>
+  {%- endif -%}
+  </table>
+</div>
+
+{% schema %}
+{
+  "name": "tlr classical condition",
+  "settings": []
+}
+{% endschema %}

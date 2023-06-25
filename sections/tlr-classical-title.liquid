@@ -1,0 +1,22 @@
+{{ 'tlr-classical-title.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-classical-title-container">
+  {%- if product.metafields.my_fields.composer -%}
+    <h1 class="tlr-classical-title-composer">{{ product.metafields.my_fields.composer }}</h1>
+  {%- endif -%}
+
+  <h2 class="tlr-classical-title-title ">{{ product.title }}</h2>
+  {%- if product.metafields.custom.soloist -%}
+    <h2 class="tlr-classical-title-title">{{ product.metafields.custom.soloist }}</h2>
+  {%- endif -%}
+  {%- if product.metafields.custom.conductor -%}
+    <h2 class="tlr-classical-title-title">Conducted by {{ product.metafields.custom.conductor }}</h2>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "tlr classical title",
+  "settings": []
+}
+{% endschema %}

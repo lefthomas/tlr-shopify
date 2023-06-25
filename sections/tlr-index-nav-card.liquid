@@ -1,0 +1,103 @@
+{{ 'tlr-index-nav-card.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-index-nav-card-view">
+  <div class="tlr-index-nav-card-container">
+    {%- if section.settings.image1 != blank -%}
+      {{
+        section.settings.image1
+        | image_url: width: 100
+        | image_tag: loading: 'lazy', class: 'tlr-index-nav-card-img'
+      }}
+    {%- endif -%}
+    <div class="tlr-index-nav-card-content">
+      <h4 class="tlr-index-nav-card-title">{{ section.settings.title1 }}</h4>
+      <p class="tlr-index-nav-card-text">{{ section.settings.text1 }}</p>
+      <a href="{{ section.settings.url1 }}" class="tlr-index-nav-card-btn">Explore</a>
+    </div>
+  </div>
+  <div class="tlr-index-nav-card-container">
+    {%- if section.settings.image2 != blank -%}
+      {{
+        section.settings.image2
+        | image_url: width: 100
+        | image_tag: loading: 'lazy', class: 'tlr-index-nav-card-img'
+      }}
+    {%- endif -%}
+    <div class="tlr-index-nav-card-content">
+      <h4 class="tlr-index-nav-card-title">{{ section.settings.title2 }}</h4>
+      <p class="tlr-index-nav-card-text">{{ section.settings.text2 }}</p>
+      <a href="{{ section.settings.url2 }}" class="tlr-index-nav-card-btn">Explore</a>
+    </div>
+  </div>
+  <div class="tlr-index-nav-card-container">
+    {%- if section.settings.image3 != blank -%}
+      {{
+        section.settings.image3
+        | image_url: width: 100
+        | image_tag: loading: 'lazy', class: 'tlr-index-nav-card-img'
+      }}
+    {%- endif -%}
+    <div class="tlr-index-nav-card-content">
+      <h4 class="tlr-index-nav-card-title">{{ section.settings.title3 }}</h4>
+      <p class="tlr-index-nav-card-text">{{ section.settings.text3 }}</p>
+      <a href="{{ section.settings.url3 }}" class="tlr-index-nav-card-btn">Explore</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+"name": "tlr index nav card",
+"settings": [
+   {
+  "type": "image_picker",
+  "id": "image1",
+  "label": "image 1"
+},
+  {"type": "text",
+  "id": "title1",
+  "label":"title 1"},
+  {"type": "text",
+  "id": "text1",
+  "label":"text 1"},
+  {
+      "type": "url",
+      "id": "url1",
+      "label": "URL 1"
+    },
+
+   {
+  "type": "image_picker",
+  "id": "image2",
+  "label": "image 2"
+},
+  {"type": "text",
+  "id": "title2",
+  "label":"title 2"},
+  {"type": "text",
+  "id": "text2",
+  "label":"text 2"},
+  {
+      "type": "url",
+      "id": "url2",
+      "label": "URL 2"
+    },
+
+   {
+  "type": "image_picker",
+  "id": "image3",
+  "label": "image 3"
+},
+{"type": "text",
+  "id": "title3",
+  "label":"title 3"},
+  {"type": "text",
+  "id": "text3",
+  "label":"text 3"},
+  {
+      "type": "url",
+      "id": "url3",
+      "label": "URL 3"
+    }]
+}
+{% endschema %}

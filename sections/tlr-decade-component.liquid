@@ -1,0 +1,32 @@
+{{ 'tlr-composer-component.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-composer-component-container">
+  <h2>By Decade</h2>
+  <div class="tlr-composer-component-list">
+    {% for collection in collections %}
+      {% if collection.metafields.custom.decade != blank %}
+        <div class="tlr-composer-component-card">
+          <a class="tlr-composer-component-link" href="{{ collection.url }}">
+            {% if collection.image %}
+              <img
+                src="{{ collection.image.src | img_url:'master' }}"
+                alt="{{ collection.title }}"
+                class="tlr-composer-component-img"
+              >
+            {% endif %}
+            <p class="tlr-composer-component-text">{{ collection.title }}</p>
+          </a>
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "tlr decade component",
+  "settings": [
+
+  ]
+}
+{% endschema %}

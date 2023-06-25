@@ -1,0 +1,34 @@
+.tlr-classical-condition-container{
+  padding: 2rem;
+  font-size: 20px;
+    width: 80%;
+  margin: 0 auto;
+}
+
+.tlr-classical-condition-title{
+  margin:0;
+}
+
+.tlr-classical-condition-table{
+  border-collapse: collapse;
+  width: 100%;
+  margin: 1rem;
+}
+
+.tlr-classical-condition-cell{
+padding-left: 4rem;
+   word-wrap: break-word;
+  white-space: normal;
+  max-width: 200px;
+  border: 1px solid black;
+}
+
+.tlr-classical-condition-row{
+  border: 1px solid black;
+}
+
+.tlr-classical-condition-tag{
+  border-right: 1px solid black;
+margin-right:10rem;
+  
+}

@@ -1,0 +1,31 @@
+{{ 'tlr-classical-description.css' | asset_url | stylesheet_tag }}
+
+<div class="tlr-classical-description-container">
+  {%- if product.metafields.custom.catalog_number -%}
+    <p class="trl-classical-description-text trl-classical-description-bold">
+     Catalogue number: {{ product.metafields.custom.catalog_number }}
+    </p>
+  {%- endif -%}
+  {%- if product.metafields.custom.label -%}
+    <p class="trl-classical-description-text">Published by {{ product.metafields.custom.label }}</p>
+  {%- endif -%}
+  {%- if product.metafields.custom.label -%}
+    <p class="trl-classical-description-text">{{ product.metafields.custom.label_colour }} label</p>
+  {%- endif -%}
+  <p class="trl-classical-description-text">
+    {%- if product.metafields.custom.country -%}
+      Made in {{ product.metafields.custom.country }}
+    {%- endif -%}
+  </p>
+  <p class="trl-classical-description-text">
+    {%- if product.metafields.custom.matrix_number -%}
+      {{ product.metafields.custom.matrix_number }}
+    {%- endif -%}
+    {%- if product.metafields.custom.pressing -%}
+      <span class="trl-classical-description-bold"> {{ product.metafields.custom.pressing }} pressing</span>
+    {%- endif -%}
+    {%- if product.metafields.custom.year_of_pressing -%}
+      , {{ product.metafields.custom.year_of_pressing }}
+    {%- endif -%}
+  </p>
+</div>
